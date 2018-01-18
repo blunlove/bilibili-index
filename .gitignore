@@ -1,0 +1,7 @@
+# vscode:
+.vscode
+
+#js:
+dist
+node_modules
+public
