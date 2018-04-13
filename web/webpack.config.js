@@ -57,7 +57,8 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         noInfo: true,
-        inline: true
+        // inline: true,
+        hot: true
     },
     performance: {
         hints: false
@@ -81,6 +82,11 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ])
+}else{
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.HotModuleReplacementPlugin()
     ])
 }
