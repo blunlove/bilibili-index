@@ -58,7 +58,8 @@ module.exports = {
         historyApiFallback: true,
         noInfo: true,
         // inline: true,
-        hot: true
+        hot: true,
+        host: '0.0.0.0'
     },
     performance: {
         hints: false
