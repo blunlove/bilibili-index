@@ -1,6 +1,6 @@
 <template>
     <div class="hot_video">
-        <div class="'hot_video_plate'">
+        <div class="hot_video_plate">
             <div class="hot_video_plate_label">
                 <div v-for="(label, index) in data.label"
                     :class="'hot_video_plate_label_' + index"
