@@ -3,12 +3,14 @@
         <div class="header_menu">
             <div class="header_menu_left">
                 <ul>
-                    <li v-for="menu in menus_left" :class="'menu ' + menu.class">
+                    <li v-for="menu in menus_left"
+                        :class="'menu ' + menu.class">
                         <div class="menu_item">
                             <div class="menu_item_under"></div>
                             <div class="menu_item_word">{{ menu.name }}</div>
                         </div>
-                        <div v-if="menu.child == 1" :class="'curtain'">
+                        <div v-if="menu.child == 1"
+                            :class="'curtain'">
                             <component :is="menu.class + '-menu'"></component>
                         </div>
                     </li>
@@ -17,7 +19,8 @@
             <div class="submission_icon"></div>
             <div class="header_menu_right">
                 <ul>
-                    <li v-for="menu in menus_right" :class="'menu ' + menu.class">
+                    <li v-for="menu in menus_right"
+                        :class="'menu ' + menu.class">
                         <div class="menu_item">
                             <div class="menu_item_under"></div>
                             <div class="menu_item_word">{{ menu.name }}</div>
@@ -33,13 +36,16 @@
             </div>
         </div>
         <!--about页面测试-->
-        <a id="logo" :is="'router-link'" to="/about"></a>
+        <a id="logo"
+            :is="'router-link'"
+            to="/about"></a>
         <div class="search">
             <div class="search_button search_rankList">
                 <div class="search_rankList_image">排行榜</div>
             </div>
             <div class="magnifier"></div>
-            <input class="search_button search_frame" :placeholder="search_value">
+            <input class="search_button search_frame"
+                :placeholder="search_value">
         </div>
     </div>
 </template>
